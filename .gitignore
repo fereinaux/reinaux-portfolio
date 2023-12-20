@@ -4,6 +4,9 @@ dist/
 # generated types
 .astro/
 
+# history
+.history
+
 # dependencies
 node_modules/
 
