@@ -1,6 +1,6 @@
 ---
 import "@fontsource-variable/pixelify-sans";
-import "@fontsource/roboto"
+import "@fontsource/roboto";
 interface Props {
   title: string;
 }
@@ -19,8 +19,36 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body
-    class="bg-gradient-to-r from-indigo-900 to-purple-900 flex font-roboto tracking-wider min-h-screen p-4 text-purple-100"
+    class="bg-gradient-to-r w-screen from-indigo-900 to-purple-900 flex font-roboto tracking-wider min-h-screen p-4 text-purple-100"
   >
     <slot />
   </body>
 </html>
+<style is:global>
+  .github-profile-badge-img {
+    border-radius: 50%;
+    width: 200px !important;
+    height: 200px !important;
+  }
+  .github-profile-badge-logo {
+    position: absolute;
+    top: 140px !important;
+    right: 45px;
+    width: 60px !important;
+    height: 60px !important;
+  }
+  .github-profile-badge {
+    height: 200px;
+		position: relative;
+  }
+	.github-profile-badge-name-wrapper {
+		position: absolute;
+		right: -160px;
+		bottom: 10px;
+
+	}
+	.github-profile-badge-name {
+		font-size: 25px !important;
+		font-family: 'Pixelify Sans Variable' !important ;
+	}
+</style>
