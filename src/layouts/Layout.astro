@@ -25,6 +25,16 @@ const { title } = Astro.props;
   </body>
 </html>
 <style is:global>
+  html {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  body {
+    display: flex;
+    flex: 1; /* no need anymore to deal with height/width */
+    flex-direction: column;
+  }
   .github-profile-badge-img {
     border-radius: 50%;
     width: 200px !important;
@@ -39,16 +49,15 @@ const { title } = Astro.props;
   }
   .github-profile-badge {
     height: 200px;
-		position: relative;
+    position: relative;
   }
-	.github-profile-badge-name-wrapper {
-		position: absolute;
-		right: -160px;
-		bottom: 10px;
-
-	}
-	.github-profile-badge-name {
-		font-size: 25px !important;
-		font-family: 'Pixelify Sans Variable' !important ;
-	}
+  .github-profile-badge-name-wrapper {
+    position: absolute;
+    right: -160px;
+    bottom: 10px;
+  }
+  .github-profile-badge-name {
+    font-size: 25px !important;
+    font-family: "Pixelify Sans Variable" !important ;
+  }
 </style>
